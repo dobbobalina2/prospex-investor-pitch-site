@@ -40,12 +40,12 @@ body {
   background-position:
     68% 18%,
     12% 4%,
-    right -180px bottom -140px,
+    right -90px bottom -70px,
     center;
   background-size:
     auto,
     auto,
-    auto 128vh,
+    auto 112vh,
     cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1308,12 +1308,12 @@ footer {
     background-position:
       68% 18%,
       12% 4%,
-      72% 72px,
+      72% 96px,
       center;
     background-size:
       auto,
       auto,
-      auto 780px,
+      auto 680px,
       cover;
   }
 
