@@ -63,6 +63,8 @@ const revealTargets = document.querySelectorAll(
   ".section, .hero-copy, .hero-system, .closing",
 );
 
+document.documentElement.classList.add("js-reveal");
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {

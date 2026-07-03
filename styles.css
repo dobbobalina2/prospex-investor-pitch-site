@@ -145,6 +145,17 @@ section {
   padding: 72px 0 90px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(clamp(24px, 4.8vw, 78px) * -1);
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(2, 5, 11, 0.94) 0%, rgba(2, 5, 11, 0.72) 42%, rgba(2, 5, 11, 0.22) 100%),
+    url("./assets/football-intelligence-bg.svg") center / cover no-repeat;
+  opacity: 0.9;
+}
+
 .hero::after,
 .section::after {
   content: "";
@@ -244,6 +255,7 @@ h3 {
 
 .hero-system {
   position: relative;
+  z-index: 1;
   min-height: 650px;
   overflow: hidden;
   border-radius: 32px;
@@ -251,7 +263,8 @@ h3 {
     linear-gradient(90deg, rgba(75, 139, 255, 0.11) 1px, transparent 1px) 0 0 / 84px 100%,
     linear-gradient(180deg, rgba(75, 139, 255, 0.08) 1px, transparent 1px) 0 0 / 100% 78px,
     radial-gradient(circle at 55% 50%, rgba(12, 99, 255, 0.28), transparent 18rem),
-    linear-gradient(160deg, rgba(2, 5, 11, 0.3), rgba(6, 22, 46, 0.92));
+    linear-gradient(160deg, rgba(2, 5, 11, 0.2), rgba(6, 22, 46, 0.74));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
 }
 
 .hero-system::before {
@@ -1157,15 +1170,23 @@ footer {
 .hero-copy,
 .hero-system,
 .closing {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.js-reveal .section,
+.js-reveal .hero-copy,
+.js-reveal .hero-system,
+.js-reveal .closing {
   transform: translateY(22px);
   opacity: 0;
   transition: opacity 680ms ease, transform 680ms ease;
 }
 
-.section.is-visible,
-.hero-copy.is-visible,
-.hero-system.is-visible,
-.closing.is-visible {
+.js-reveal .section.is-visible,
+.js-reveal .hero-copy.is-visible,
+.js-reveal .hero-system.is-visible,
+.js-reveal .closing.is-visible {
   transform: translateY(0);
   opacity: 1;
 }
