@@ -150,9 +150,16 @@ section {
   position: absolute;
   inset: 0 calc(clamp(24px, 4.8vw, 78px) * -1);
   z-index: 0;
-  background:
-    linear-gradient(90deg, rgba(2, 5, 11, 0.94) 0%, rgba(2, 5, 11, 0.72) 42%, rgba(2, 5, 11, 0.22) 100%),
-    url("./assets/football-intelligence-bg.svg") center / cover no-repeat;
+  background-image:
+    linear-gradient(90deg, rgba(2, 5, 11, 0.94) 0%, rgba(2, 5, 11, 0.7) 38%, rgba(2, 5, 11, 0.08) 100%),
+    url("./assets/football-intelligence-bg.svg");
+  background-position:
+    center,
+    right bottom;
+  background-size:
+    100% 100%,
+    auto 118%;
+  background-repeat: no-repeat;
   opacity: 0.9;
 }
 
@@ -1270,6 +1277,15 @@ footer {
   .hero {
     min-height: auto;
     padding-top: 46px;
+  }
+
+  .hero::before {
+    background-position:
+      center,
+      72% 72px;
+    background-size:
+      100% 100%,
+      auto 780px;
   }
 
   h1 {
