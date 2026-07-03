@@ -32,10 +32,23 @@ html {
 
 body {
   margin: 0;
-  background:
+  background-image:
     radial-gradient(circle at 68% 18%, rgba(12, 99, 255, 0.22), transparent 30rem),
     radial-gradient(circle at 12% 4%, rgba(34, 167, 255, 0.12), transparent 24rem),
+    url("./assets/football-intelligence-bg.svg"),
     linear-gradient(180deg, #03060d 0%, #02050b 45%, #010308 100%);
+  background-position:
+    68% 18%,
+    12% 4%,
+    right -180px bottom -140px,
+    center;
+  background-size:
+    auto,
+    auto,
+    auto 128vh,
+    cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--white);
   font-family: var(--font-body);
   line-height: 1.5;
@@ -151,16 +164,11 @@ section {
   inset: 0 calc(clamp(24px, 4.8vw, 78px) * -1);
   z-index: 0;
   background-image:
-    linear-gradient(90deg, rgba(2, 5, 11, 0.94) 0%, rgba(2, 5, 11, 0.7) 38%, rgba(2, 5, 11, 0.08) 100%),
-    url("./assets/football-intelligence-bg.svg");
-  background-position:
-    center,
-    right bottom;
-  background-size:
-    100% 100%,
-    auto 118%;
+    linear-gradient(90deg, rgba(2, 5, 11, 0.94) 0%, rgba(2, 5, 11, 0.7) 38%, rgba(2, 5, 11, 0.08) 100%);
+  background-position: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  opacity: 0.9;
+  opacity: 0.78;
 }
 
 .hero::after,
@@ -417,6 +425,23 @@ h3 {
   gap: clamp(34px, 6vw, 84px);
   align-items: center;
   padding: clamp(92px, 12vw, 160px) 0;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc((100vw - 100%) / -2);
+  bottom: 0;
+  left: calc((100vw - 100%) / -2);
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(2, 5, 11, 0.74), rgba(2, 5, 11, 0.58));
+  pointer-events: none;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-heading {
@@ -1279,13 +1304,17 @@ footer {
     padding-top: 46px;
   }
 
-  .hero::before {
+  body {
     background-position:
-      center,
-      72% 72px;
+      68% 18%,
+      12% 4%,
+      72% 72px,
+      center;
     background-size:
-      100% 100%,
-      auto 780px;
+      auto,
+      auto,
+      auto 780px,
+      cover;
   }
 
   h1 {
