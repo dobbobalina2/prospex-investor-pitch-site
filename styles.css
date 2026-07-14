@@ -1620,16 +1620,85 @@ footer {
     display: none !important;
   }
 
+  html,
   body,
   .site-shell,
+  main,
   .section,
-  .closing {
+  .closing,
+  footer {
     background: #fff !important;
     color: #000 !important;
   }
 
+  main *,
+  main *::before,
+  main *::after,
+  footer * {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: #aaa !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .hero {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    background: #fff !important;
+  }
+
+  .hero-copy {
+    width: auto;
+    min-height: 0;
+    padding: 42px 32px;
+  }
+
+  .hero-visual,
+  .telemetry {
+    display: none !important;
+  }
+
+  .sports-rail {
+    height: 220px;
+    break-inside: avoid;
+  }
+
+  .sports-labels span,
+  .sports-labels strong,
+  .sports-labels small {
+    color: #fff !important;
+  }
+
+  .js-reveal .section,
+  .js-reveal .hero-copy,
+  .js-reveal .sports-rail,
+  .js-reveal .thesis-band,
+  .js-reveal .closing {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .section,
   .closing {
+    min-height: 0;
+    padding: 42px 32px;
+    break-inside: auto;
+  }
+
+  .section h2,
+  .closing h2 {
+    font-size: 38px;
+  }
+
+  article,
+  blockquote,
+  .workflow-card,
+  .query-screen,
+  .guardrail,
+  .legal-note {
     break-inside: avoid;
   }
 }

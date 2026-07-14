@@ -66,4 +66,11 @@ Focused views were required because the full-page capture is too tall to judge p
 - [x] Carry the editorial design system through the full investor narrative.
 - [x] Verify interactions, desktop layout, mobile layout, and browser errors.
 
+## Post-review print verification
+
+- Restored a full print reset for nested panels, grids, type, borders, and root-page backgrounds after PR review identified a contrast regression.
+- Forced scroll-reveal content visible in paged media, removed the absolute hero layer from print, and allowed long sections to fragment without blank pages.
+- Browser PDF render: 17 pages; every page contains extractable narrative text.
+- Visual inspection: pages 1, 4, 8, 12, and 17 show high-contrast black-on-white content, intact hierarchy, clean section transitions, and no dark-page or blank-page artifacts.
+
 final result: passed
