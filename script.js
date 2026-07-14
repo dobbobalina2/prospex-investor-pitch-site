@@ -60,7 +60,7 @@ document.querySelectorAll("[data-print]").forEach((button) => {
 });
 
 const revealTargets = document.querySelectorAll(
-  ".section, .hero-copy, .hero-system, .closing",
+  ".section, .hero-copy, .hero-visual, .sports-rail, .thesis-band, .closing",
 );
 
 document.documentElement.classList.add("js-reveal");
