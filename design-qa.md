@@ -73,4 +73,21 @@ Focused views were required because the full-page capture is too tall to judge p
 - Browser PDF render: 17 pages; every page contains extractable narrative text.
 - Visual inspection: pages 1, 4, 8, 12, and 17 show high-contrast black-on-white content, intact hierarchy, clean section transitions, and no dark-page or blank-page artifacts.
 
+## 2026-07-14 official logo update
+
+- Source visual truth: `/Users/jfk/dev/blockchain/blockchain/Prospex_Landing/public/assets/brand/prospex-dark-logo-nav.png` and the logo-system guidance in `/Users/jfk/dev/blockchain/blockchain/Prospex Wiki/20 Sources/assets/Prospex_Brand_Identity_System_v3_vibrant.pdf`.
+- Implemented asset: `assets/prospex-official-dark-logo.webp`, copied from the existing approved dark-mode navigation lockup without recoloring or redrawing it.
+- Desktop implementation: `/Users/jfk/Documents/Codex/2026-07-13/can/work/prospex-logo-desktop.png` at 1488 × 1058 with 2× device scale.
+- Mobile implementation: `/Users/jfk/Documents/Codex/2026-07-13/can/work/prospex-logo-mobile.png` at 390 × 844 with 2× device scale.
+- State: initial page load, dark theme, header and hero visible.
+- Full-view comparison: the official white wordmark and cyan X remain sharp, proportionally correct, and visually balanced inside the existing investor-site frame; the surrounding navigation hierarchy is unchanged.
+- Focused comparison: source logo, desktop render, and mobile render were inspected together. Transparency, edge quality, color, aspect ratio, and clear space match the supplied asset with no visible halo, crop, stretch, or code-drawn replacement.
+- Fonts and typography: no surrounding type changed; the image replaces only the approximate text wordmark.
+- Spacing and layout rhythm: the desktop lockup remains aligned to the navigation grid, while the 150 × 46 mobile frame leaves the investor CTA fully visible.
+- Colors and tokens: the supplied white/cyan mark is preserved exactly against Field Night; the existing Signal Blue frame remains the interaction affordance.
+- Image quality and asset fidelity: the 384 × 88 transparent WebP loads at its natural dimensions and renders below native size at both verified breakpoints.
+- Copy and content: the link retains the accessible name `Prospex home`; the decorative image uses empty alt text to avoid duplicate announcement.
+- Browser verification: logo loaded successfully, console and page errors were empty, and the 390px viewport had a 390px document width with no page-level overflow.
+- Comparison history: the first implementation pass produced no actionable P0, P1, or P2 findings, so no visual correction loop was required.
+
 final result: passed
